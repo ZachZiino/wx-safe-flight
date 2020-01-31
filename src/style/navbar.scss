@@ -1,0 +1,25 @@
+.title-wrapper {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    .title-text {
+        font-size: 3.5em;
+        text-align: center;
+        color: $offwhite;
+    }
+
+    .title-img {
+        img {
+            width: 25px;
+        }
+    }
+}
+
+nav {
+    cursor: pointer;
+
+    .navbar-brand {
+        text-decoration: none;
+    }
+}

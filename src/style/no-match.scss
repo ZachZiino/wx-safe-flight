@@ -1,0 +1,29 @@
+.no-match-wrapper {
+    font-size: 2.5em;
+    height: 600px;
+    align-items: center;
+    text-align: center;
+    padding-top: 55px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    .plane-img {
+        width: 40%;
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+
+    .no-match-text {
+        padding-bottom: 25px;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
