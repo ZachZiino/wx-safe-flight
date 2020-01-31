@@ -17,41 +17,16 @@ export default class App extends Component {
     super();
 
     Icons();
-    this.state = {
-      loggedInStatus: "NOT_LOGGED_IN"
-    }
 
+    this.handleRoute = this.handleRoute.bind(this);
+  }
 
-
-    this.handleSuccessfulLogin = this.handleSuccessfulLogin.bind(this);
-    this.handleUnSuccessfulLogin = this.handleUnSuccessfulLogin.bind(this);
-    this.handleSuccessfulLogout = this.handleSuccessfulLogout.bind(this);
+  handleRoute() {
+    handleLogin()
   }
 
 
-  handleSuccessfulLogin() {
-    this.setState({
-      loggedInStatus: "LOGGED_IN"
-    })
-  }
-
-  handleUnSuccessfulLogin() {
-    this.setState({
-      loggedInStatus: "NOT_LOGGED_IN"
-    })
-  }
-
-  handleSuccessfulLogout() {
-    this.setState({
-      loggedInStatus: "NOT_LOGGED_IN"
-    })
-  }
-
-  authorizedPages() {
-    return [<Route key="home" path="/fly" component={Home} />];
-  }
-
-
+  
   render() {
     return (
       <div className='app'>
@@ -64,9 +39,7 @@ export default class App extends Component {
             {/* <Route exact path="/fly" component={Home} /> */}
 
             <Route exact path="/" component={SignIn} />
-
-            {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
-
+            
             <Route component={NoMatch} />
           </Switch>
           </div>

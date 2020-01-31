@@ -1,6 +1,6 @@
 .title-wrapper {
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     .title-text {
@@ -16,8 +16,31 @@
     }
 }
 
-nav {
-    cursor: pointer;
+.navbar {
+
+    .nav-link-wrapper {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+
+        .fly-link {
+            font-size: 3.5em;
+            text-align: center;
+            color: $offwhite;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                color: black;
+            }
+
+            &:hover {
+                border-bottom: 2px solid $red;
+            }
+        }
+    }
+
 
     .navbar-brand {
         text-decoration: none;

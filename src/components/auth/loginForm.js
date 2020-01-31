@@ -15,6 +15,11 @@ export default class Login extends Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.handleLogin = this.handleLogin.bind(this);
+    }
+
+    handleLogin() {
+        console.log("logged in");
     }
 
 
@@ -34,12 +39,13 @@ export default class Login extends Component {
             }
         }
         ).then(response => {
-            console.log(response)
+            console.log(response)  
         }).catch(error => {
             this.setState({
                 errorText: "An error occured"
             })
         });
+        this.handleLogin();
         event.preventDefault();
     }
 
