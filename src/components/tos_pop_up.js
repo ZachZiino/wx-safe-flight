@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class TOS_POP extends Component {
+export default class TosPop extends Component {
     constructor() {
         super();
 

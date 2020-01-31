@@ -7,7 +7,7 @@ import {
 import Home from "./pages/home";
 import SignIn from "./pages/login";
 import NoMatch from "./pages/no-match";
-import TOS_POP from '../components/tos_pop_up';
+import TosPop from '../components/tos_pop_up';
 import Footer from './footer';
 import NavBar from './navbar';
 import Icons from "./helpers/icons";
@@ -55,7 +55,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
-        <TOS_POP />
+        <TosPop />
         <Router>
           <div>
             <NavBar />

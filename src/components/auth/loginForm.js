@@ -9,7 +9,8 @@ export default class Login extends Component {
         this.state = {
             email: "",
             password: "",
-            errorText: ""
+            errorText: "",
+            LOGGED_IN_STATUS: "NOT_LOGGGED_IN"
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,10 +28,8 @@ export default class Login extends Component {
     handleSubmit(event) {
         axios.post("https://cors-anywhere.herokuapp.com/https://wx-backend-app.herokuapp.com/login",
         {
-            user: {
-                email: this.state.email, 
-                password: this.state.password
-            }
+            email: this.state.email, 
+            password: this.state.password
         }
         ).then(response => {
             console.log(response)
