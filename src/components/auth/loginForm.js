@@ -13,7 +13,7 @@ export default class Login extends Component {
             email: "",
             password: "",
             errorText: "",
-            redirect: true
+            loggedInStatus: false
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,9 +22,13 @@ export default class Login extends Component {
     }
 
     handleLogin() {
-        auth.login(() => {
-            this.props.history.push("/fly");
-        })
+        if (this.state.loggedInStatus == true) {
+            auth.login(() => {
+                this.props.history.push("/fly");
+            })
+        } else {
+            alert("Wrong Email Or Password");
+        }
     }
     
 
@@ -45,14 +49,18 @@ export default class Login extends Component {
             }
         }
         ).then(response => {
-            console.log(response)  
+            console.log(response)
+            this.setState({
+                loggedInStatus: true
+            },
+            this.handleLogin
+            )  
         }).catch(error => {
             this.setState({
                 errorText: "An error occured"
             })
         });
         event.preventDefault();
-        this.handleLogin();
     }
 
 
