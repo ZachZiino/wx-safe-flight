@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function NavBar() {
   return (
@@ -16,11 +17,11 @@ function NavBar() {
             </div>
         </Link>
       </div>
-      <div className="nav-link-wrapper">
-          <Link className="fly-link" exact to="/fly" >
-            Fly
-          </Link>
-      </div>
+      {/* <div className="nav-link-wrapper">
+          <div className="right-side">
+            <FontAwesomeIcon icon="sign-out-alt" />
+          </div>
+      </div> */}
     </div>
   );
 }

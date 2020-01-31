@@ -5,12 +5,13 @@ import {
   Route
 } from 'react-router-dom';
 import Home from "./pages/home";
-import SignIn from "./pages/login";
+import Login from "./auth/loginForm";
 import NoMatch from "./pages/no-match";
 import TosPop from '../components/tos_pop_up';
 import Footer from './footer';
 import NavBar from './navbar';
 import Icons from "./helpers/icons";
+import { ProtectedRoute } from "./auth/protected-route";
 
 export default class App extends Component {
   constructor() {
@@ -18,15 +19,9 @@ export default class App extends Component {
 
     Icons();
 
-    this.handleRoute = this.handleRoute.bind(this);
-  }
-
-  handleRoute() {
-    handleLogin()
   }
 
 
-  
   render() {
     return (
       <div className='app'>
@@ -36,9 +31,10 @@ export default class App extends Component {
             <NavBar />
           <Switch>
 
-            {/* <Route exact path="/fly" component={Home} /> */}
+            <ProtectedRoute exact path="/fly" component={Home} />
 
-            <Route exact path="/" component={SignIn} />
+            <Route exact path="/" component={Login
+            } />
             
             <Route component={NoMatch} />
           </Switch>

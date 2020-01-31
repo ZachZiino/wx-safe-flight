@@ -23,20 +23,16 @@
         display: flex;
         justify-content: center;
 
-        .fly-link {
-            font-size: 3.5em;
-            text-align: center;
-            color: $offwhite;
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: 0.2s ease-in-out;
+        .right-side {
+
+            svg {
+                font-size: 3em;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
 
             &:hover {
-                color: black;
+                color: $red;
             }
-
-            &:hover {
-                border-bottom: 2px solid $red;
             }
         }
     }

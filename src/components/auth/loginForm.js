@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import auth from '../auth';
+
+
 
 export default class Login extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             email: "",
             password: "",
             errorText: "",
-            LOGGED_IN_STATUS: "NOT_LOGGGED_IN"
+            redirect: true
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,8 +22,11 @@ export default class Login extends Component {
     }
 
     handleLogin() {
-        console.log("logged in");
+        auth.login(() => {
+            this.props.history.push("/fly");
+        })
     }
+    
 
 
     handleChange(event) {
@@ -45,8 +51,8 @@ export default class Login extends Component {
                 errorText: "An error occured"
             })
         });
-        this.handleLogin();
         event.preventDefault();
+        this.handleLogin();
     }
 
 
@@ -76,7 +82,7 @@ export default class Login extends Component {
                         />
                     </div>
                     <button className="btn-form" type="submit">Login</button>
-                </form>
+                </form> 
             </div>
 		)
 	}
