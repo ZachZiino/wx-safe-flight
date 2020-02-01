@@ -12,7 +12,6 @@ export default class Login extends Component {
         this.state = {
             email: "",
             password: "",
-            errorText: "",
             loggedInStatus: "invalid"
         }
 
@@ -49,16 +48,13 @@ export default class Login extends Component {
             }
         }
         ).then(response => {
-            console.log(response)
             this.setState({
                 loggedInStatus: response.data
             },
             this.handleLogin
             )  
         }).catch(error => {
-            this.setState({
-                errorText: "An error occured"
-            })
+            console.log(error, "error in loginForm")
         });
         event.preventDefault();
     }
@@ -75,7 +71,6 @@ export default class Login extends Component {
                         type="email"
                         name="email"
                         placeholder="your email"
-                        value={null}
                         onChange={this.handleChange}
                         />
                     </div>
@@ -85,7 +80,6 @@ export default class Login extends Component {
                         type="password"
                         name="password"
                         placeholder="your password"
-                        value={null}
                         onChange={this.handleChange}
                         />
                     </div>
