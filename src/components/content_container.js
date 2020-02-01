@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 
-
-
-
 class Content_Container extends Component {
 
 	constructor() {
@@ -19,7 +16,6 @@ class Content_Container extends Component {
             user_cloud: "",
             user_vis: "",
             response: "",
-            redirect: false,
             show_weather_button: false,
             show_weather: true,
             isHidden: true

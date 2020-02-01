@@ -13,7 +13,7 @@ export default class Login extends Component {
             email: "",
             password: "",
             errorText: "",
-            loggedInStatus: false
+            loggedInStatus: "invalid"
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,7 +22,7 @@ export default class Login extends Component {
     }
 
     handleLogin() {
-        if (this.state.loggedInStatus == true) {
+        if (this.state.loggedInStatus == "valid") {
             auth.login(() => {
                 this.props.history.push("/fly");
             })
@@ -51,7 +51,7 @@ export default class Login extends Component {
         ).then(response => {
             console.log(response)
             this.setState({
-                loggedInStatus: true
+                loggedInStatus: response.data
             },
             this.handleLogin
             )  
