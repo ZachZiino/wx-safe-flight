@@ -16,29 +16,6 @@
     }
 }
 
-.navbar {
-
-    .nav-link-wrapper {
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-
-        .right-side {
-
-            svg {
-                font-size: 3em;
-                cursor: pointer;
-                transition: 0.2s ease-in-out;
-
-            &:hover {
-                color: $red;
-            }
-            }
-        }
-    }
-
-
-    .navbar-brand {
-        text-decoration: none;
-    }
+.navbar-brand {
+    text-decoration: none;
 }

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import auth from './auth';
 
 
 class Content_Container extends Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
             wind: "",
@@ -87,6 +89,18 @@ class Content_Container extends Component {
             <div className="content-wrapper">
                 <div className="flex-container">
                     <div className="form_wrapper">
+                        <div className="nav-link-wrapper">
+                            <div className="right-side">
+                                Logout
+                                <FontAwesomeIcon icon="sign-out-alt" 
+                                onClick={() => {
+                                    auth.logout(() => {
+                                        this.props.history.push("/");
+                                    });
+                                }}
+                                />
+                            </div>
+                        </div>
                         <form onSubmit={this.handleSubmit} className="submit-form-wrapper">
                             <div className="user_airport_wrapper">
                                 <input 

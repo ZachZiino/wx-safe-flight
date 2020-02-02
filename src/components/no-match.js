@@ -8,7 +8,7 @@ export default function() {
                     <div className="no-match-text">
                         This page has flown away!
                     </div>
-                    <img className="plane-img" src={require("../../../static/assets/images/plane.jpg")} />
+                    <img className="plane-img" src={require("../../static/assets/images/plane.jpg")} />
                 <Link to="/">Click here for the homepage</Link>
             </div>
         </div>

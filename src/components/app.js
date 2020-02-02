@@ -4,10 +4,10 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import Home from "./pages/home";
+import Content_Container from "./content_container";
 import Login from "./auth/loginForm";
 import Register from "./auth/registerForm";
-import NoMatch from "./pages/no-match";
+import NoMatch from "./no-match";
 import TosPop from '../components/tos_pop_up';
 import Footer from './footer';
 import NavBar from './navbar';
@@ -32,7 +32,7 @@ export default class App extends Component {
             <NavBar />
           <Switch>
 
-            <ProtectedRoute exact path="/fly" component={Home} />
+            <ProtectedRoute exact path="/fly" component={Content_Container} />
 
             <Route exact path="/" component={Login} />
 

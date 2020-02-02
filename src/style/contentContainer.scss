@@ -7,6 +7,28 @@
     border-radius: 5px 5px 0px 0px;
 
 
+    .nav-link-wrapper {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+    
+        .right-side {
+    
+            svg {
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                margin-left: 10px;
+    
+            &:hover {
+                color: $red;
+            }
+            }
+        }
+    }
+
+
     .submit-form-wrapper {
         @include input-element();
         margin-top: 25px;
@@ -60,4 +82,3 @@
             font-weight: 500;
         }
     }
-
