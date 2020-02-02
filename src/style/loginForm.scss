@@ -5,6 +5,20 @@
         @include input-element();
         margin-bottom: 25px;
 
+        .register-to-login-text {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                color: $red;
+                font-weight: 600;
+            }
+        }
+
         .btn-form {
             @include base-btn();
             width: 100%;

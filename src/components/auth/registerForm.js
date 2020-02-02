@@ -1,33 +1,32 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import auth from '../auth';
 
 
 
-export default class Login extends Component {
+export default class Register extends Component {
     constructor() {
         super();
 
         this.state = {
             email: "",
             password: "",
-            loggedInStatus: "invalid"
+            registerdStatus: "notDone"
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.handleLogin = this.handleLogin.bind(this);
+        this.handleRegister = this.handleRegister.bind(this);
     }
 
-    handleLogin() {
-        if (this.state.loggedInStatus == "valid") {
+    handleRegister() {
+        if (this.state.registerdStatus == "Done") {
             auth.login(() => {
                 this.props.history.push("/fly");
             })
         } else {
-            alert("Wrong Email Or Password");
+            alert("Invalid");
         }
     }
     
@@ -41,7 +40,7 @@ export default class Login extends Component {
     
     
     handleSubmit(event) {
-        axios.post("https://cors-anywhere.herokuapp.com/https://wx-backend-app.herokuapp.com/login",
+        axios.post("https://cors-anywhere.herokuapp.com/https://wx-backend-app.herokuapp.com/register",
         {
             user: {
                 email: this.state.email, 
@@ -50,12 +49,12 @@ export default class Login extends Component {
         }
         ).then(response => {
             this.setState({
-                loggedInStatus: response.data
+                registerdStatus: response.data
             },
-            this.handleLogin
+             this.handleRegister
             )  
         }).catch(error => {
-            console.log(error, "error in loginForm")
+            console.log(error, "error in registerForm")
         });
         event.preventDefault();
     }
@@ -66,6 +65,9 @@ export default class Login extends Component {
 		return (
             <div className="flex-container">
                 <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
+                    <div className="register-title">
+                        Register To Continue To Application
+                    </div>
                     <div className="form-group">
                         <FontAwesomeIcon icon="envelope-square" />
                         <input 
@@ -84,14 +86,9 @@ export default class Login extends Component {
                         onChange={this.handleChange}
                         />
                     </div>
-                    <button className="btn-form" type="submit">Login</button>
-
-                    <div className="register-to-login-text">
-                        Not A User? Click <Link to="/register">Here</Link> To Register
-                    </div>
-                </form>
+                    <button className="btn-form" type="submit">Register</button>
+                </form> 
             </div>
 		)
 	}
 }
-
