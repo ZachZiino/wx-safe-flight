@@ -6,6 +6,15 @@
     background-color: $offwhite;
     border-radius: 5px 5px 0px 0px;
 
+    .content-title {
+        width: 350px;;
+        text-align: center;
+        font-size: 2em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        line-height: 1.8;
+    }
+
 
     .nav-link-wrapper {
         margin-bottom: 25px;

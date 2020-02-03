@@ -101,6 +101,9 @@ class Content_Container extends Component {
                                 />
                             </div>
                         </div>
+                        <div className="content-title">
+                             Enter your Airport and your weather minimums below to see if you are safe to fly.
+                        </div>
                         <form onSubmit={this.handleSubmit} className="submit-form-wrapper">
                             <div className="user_airport_wrapper">
                                 <input 

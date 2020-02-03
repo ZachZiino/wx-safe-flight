@@ -1,5 +1,7 @@
 .flex-container {
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
 
     .auth-form-wrapper {
         @include input-element();
