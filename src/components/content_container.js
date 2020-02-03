@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import auth from './auth';
+import Modal from './modals/modal';
 
 
 class Content_Container extends Component {
@@ -20,14 +21,29 @@ class Content_Container extends Component {
             response: "",
             show_weather_button: false,
             show_weather: true,
-            isHidden: true
+            isHidden: true,
+            isShowing: false
         }
         
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleMinimums = this.handleMinimums.bind(this);
         this.renderWeather = this.renderWeather.bind(this);
+        this.openModalHandler = this.openModalHandler.bind(this);
+        this.closeModalHandler = this.closeModalHandler.bind(this);
     }
+
+    openModalHandler() {
+		this.setState({
+			isShowing: true
+		});
+	}
+
+	closeModalHandler() {
+		this.setState({
+			isShowing: false
+		});
+	}
 
 
     renderWeather() {
@@ -101,6 +117,23 @@ class Content_Container extends Component {
                                 }}
                                 />
                             </div>
+                        </div>
+                        <div className="modal-wrapper">
+				                { this.state.isShowing ? 
+                                
+                                <div onClick={this.closeModalHandler} className="back-drop"></div> 
+                                
+                                : null }
+
+                                <button className="open-modal-btn" onClick={this.openModalHandler}>What is an ICAO Code?</button>
+
+                                <Modal className="modal"
+                                    show={this.state.isShowing}
+                                    close={this.closeModalHandler}>
+                                        The ICAO airport code or 
+                                        location indicator is a four-letter code designating aerodromes 
+                                        around the world. Example: Los Angeles International Airport = KLAX
+                                </Modal>
                         </div>
                         <form onSubmit={this.handleSubmit} className="submit-form-wrapper">
                             <div className="user_airport_wrapper">
