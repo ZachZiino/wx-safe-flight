@@ -3,31 +3,19 @@
     .flex-container-content {
         display: flex;
         justify-content: center;
-        margin-left: 15px;
-        margin-right: 15px;
-        border-radius: 5px 5px 0px 0px;
-        background-color: rgba(240, 243, 245, 0.8);
-
-        .content-title {
-            width: 350px;;
-            text-align: center;
-            font-size: 2em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
 
         .nav-link-wrapper {
-            margin-bottom: 25px;
+            margin-bottom: 45px;
             margin-top: 25px;
             display: flex;
             justify-content: center;
             font-size: 2em;
+            color: $offwhite;
         
             .right-side {
         
                 svg {
+                    color: $offwhite;
                     cursor: pointer;
                     transition: 0.2s ease-in-out;
                     margin-left: 10px;
@@ -40,13 +28,20 @@
         }
 
 
+
+
         .submit-form-wrapper {
             @include input-element();
+            background-color: rgba(240, 243, 245, 0.8);
+            border-radius: 5px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
             margin-top: 25px;
-            margin-bottom: 35px;
+            margin-bottom: 75px;
             font-size: 1.5em;
             font-weight: 500;
-            width: auto;
             
 
 
@@ -60,8 +55,8 @@
 
         
     .render-content-wrapper {
-            border-radius: 0px 0px 5px 5px;
-            background-color: rgba(240, 243, 245, 0.8);
+            color: $offwhite;
+            padding-top: 30px;
             height: 295px;
             text-align: center;
             margin-left: 15px;
