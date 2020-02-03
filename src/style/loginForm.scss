@@ -5,6 +5,16 @@
         @include input-element();
         margin-bottom: 25px;
 
+
+        .login-title {
+            width: 400px;;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
         .register-to-login-text {
             text-align: center;
             font-size: 2em;
