@@ -64,7 +64,7 @@ export default class Login extends Component {
 
 	render() {
 		return (
-            <div className="flex-container">
+            <div className="flex-container" >
                 <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
                 <div className="login-title">
                     Wx Safe Flight helps you stay within your weather minimums.

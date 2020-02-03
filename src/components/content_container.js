@@ -87,7 +87,7 @@ class Content_Container extends Component {
 	render() {
 		return (
             <div className="content-wrapper">
-                <div className="flex-container">
+                <div className="flex-container-content">
                     <div className="form_wrapper">
                         <div className="nav-link-wrapper">
                             <div className="right-side">
