@@ -39,6 +39,7 @@ export default class App extends Component {
             <Route exact path="/register" component={Register} />
             
             <Route component={NoMatch} />
+            
           </Switch>
           </div>
         </Router>

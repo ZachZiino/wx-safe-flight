@@ -66,7 +66,7 @@ export default class Register extends Component {
             <div className="flex-container">
                 <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
                     <div className="register-title">
-                        Register To Continue To Application
+                        Register To Redirect To Application
                     </div>
                     <div className="form-group">
                         <FontAwesomeIcon icon="envelope-square" />
@@ -82,7 +82,7 @@ export default class Register extends Component {
                         <input 
                         type="password"
                         name="password"
-                        placeholder="your password"
+                        placeholder="unique password"
                         onChange={this.handleChange}
                         />
                     </div>
