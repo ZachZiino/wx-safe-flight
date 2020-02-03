@@ -8,7 +8,7 @@ import Content_Container from "./content_container";
 import Login from "./auth/loginForm";
 import Register from "./auth/registerForm";
 import NoMatch from "./no-match";
-// import TosPop from '../components/tos_pop_up';
+import TosPop from '../components/tos_pop_up';
 import Footer from './footer';
 import NavBar from './navbar';
 import Icons from "./helpers/icons";
@@ -26,7 +26,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
-        {/* <TosPop /> */}
+        <TosPop />
         <Router>
           <div>
             <NavBar />
