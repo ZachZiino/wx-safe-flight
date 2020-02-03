@@ -66,6 +66,7 @@ class Content_Container extends Component {
               'Authorization': 'LuCJKrhy8YIEydJ3rGAErm0ju5KQ87oBW9C1SCGyqDs'
             }
         }).then(response => {
+            console.log(response)
             this.setState({
                 wind: response.data.wind_speed.value,
                 vis: response.data.visibility.value,
