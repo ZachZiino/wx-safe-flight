@@ -65,8 +65,8 @@ export default class Register extends Component {
 
 	render() {
 		return (
-            <div className="flex-container">
-                <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
+            <div className="flex-container-register">
+                <form onSubmit={this.handleSubmit} className="auth-form-wrapper-register">
                     <div className="register-title">
                         Register To Redirect To Application
                     </div>

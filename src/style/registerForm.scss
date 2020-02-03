@@ -1,6 +1,53 @@
-.register-title {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 2em;
-    font-weight: 500;
+.flex-container-register {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+    .auth-form-wrapper-register {
+        @include input-element();
+        background-color: rgba(240, 243, 245, 0.8);
+        border-radius: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 105px;
+        margin-bottom: 225px;
+        margin-top: 15px;
+
+
+        .register-title {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 2em;
+            font-weight: 500;
+        }
+    
+        .btn-form {
+            @include base-btn();
+            width: 100%;
+            font-size: 1.6em;
+        }   
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+            padding: 42px;
+            font-size: 1.5em;
+
+            svg {
+                font-size: 2em;
+                margin-right: 15px;
+                color: $green;
+                margin-top: 10px;
+                transition: 0.3s ease-in-out;
+
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
 }
+
+
+

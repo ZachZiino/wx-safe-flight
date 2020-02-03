@@ -1,93 +1,98 @@
-.flex-container-content {
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 15px;
-    margin-right: 15px;
-    background-color: rgba(240, 243, 245, 0.8);
-    border-radius: 5px 5px 0px 0px;
+.content-wrapper {
 
-    .content-title {
-        width: 350px;;
-        text-align: center;
-        font-size: 2em;
-        margin-top: 30px;
-        margin-bottom: 15px;
-        line-height: 1.8;
-    }
-
-
-    .nav-link-wrapper {
-        margin-bottom: 25px;
-        margin-top: 25px;
+    .flex-container-content {
         display: flex;
         justify-content: center;
-        font-size: 2em;
-    
-        .right-side {
-    
-            svg {
-                cursor: pointer;
-                transition: 0.2s ease-in-out;
-                margin-left: 10px;
-    
-            &:hover {
-                color: $red;
-            }
-            }
-        }
-    }
-
-
-    .submit-form-wrapper {
-        @include input-element();
-        margin-top: 25px;
-        margin-bottom: 35px;
-        font-size: 1.5em;
-        font-weight: 500;
-        width: auto;
-
-
-    }
-
-}
-
-.btn {
-    @include base-btn();
-}
-
-    
-.render-content-wrapper {
-        border-radius: 0px 0px 5px 5px;
-        background-color: rgba(240, 243, 245, 0.8);
-        height: 295px;
-        text-align: center;
         margin-left: 15px;
         margin-right: 15px;
-        line-height: 1.5;
+        border-radius: 5px 5px 0px 0px;
+        background-color: rgba(240, 243, 245, 0.8);
 
-        .render-content {
-            display: flex;
-            justify-content: space-evenly;
-            font-size: 2.5em;
-            font-weight: 500;
+        .content-title {
+            width: 350px;;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            line-height: 1.8;
         }
 
-        .render-content-weather {
 
-            padding-left: 7px;
-            padding-right: 7px;
+        .nav-link-wrapper {
+            margin-bottom: 25px;
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            font-size: 2em;
+        
+            .right-side {
+        
+                svg {
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+                    margin-left: 10px;
+        
+                &:hover {
+                    color: $red;
+                }
+                }
+            }
+        }
+
+
+        .submit-form-wrapper {
+            @include input-element();
             margin-top: 25px;
             margin-bottom: 35px;
-            display: flex;
-            justify-content: space-evenly;
             font-size: 1.5em;
             font-weight: 500;
+            width: auto;
+            
+
+
         }
 
-        .render_weather {
-            display: flex;
-            justify-content: space-evenly;
-            font-size: 2.5em;
-            font-weight: 500;
-        }
     }
+
+    .btn {
+        @include base-btn();
+    }
+
+        
+    .render-content-wrapper {
+            border-radius: 0px 0px 5px 5px;
+            background-color: rgba(240, 243, 245, 0.8);
+            height: 295px;
+            text-align: center;
+            margin-left: 15px;
+            margin-right: 15px;
+            line-height: 1.5;
+
+            .render-content {
+                display: flex;
+                justify-content: space-evenly;
+                font-size: 2.5em;
+                font-weight: 500;
+            }
+
+            .render-content-weather {
+
+                padding-left: 7px;
+                padding-right: 7px;
+                margin-top: 25px;
+                margin-bottom: 35px;
+                display: flex;
+                justify-content: space-evenly;
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+
+            .render_weather {
+                display: flex;
+                justify-content: space-evenly;
+                font-size: 2.5em;
+                font-weight: 500;
+            }
+        }
+
+}
