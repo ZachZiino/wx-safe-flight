@@ -25,8 +25,10 @@ export default class Register extends Component {
             auth.login(() => {
                 this.props.history.push("/fly");
             })
+        } else if (this.state.registerdStatus == "notDone") {
+            alert("Email Already In Use");
         } else {
-            alert("Invalid");
+            alert("An Error Has Occured")
         }
     }
     
