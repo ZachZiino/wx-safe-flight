@@ -1,6 +1,6 @@
 .modal-wrapper {
     transition: all .8s;
-    height: 20px;
+    height: 13px;
 
     .modal-body {
         margin-top: 10px;
@@ -34,7 +34,7 @@
         background-color: rgba(240, 243, 245, 0.8);
         color: $blue;
         border-radius: 5px;
-        height: 24px;
+        height: auto;
         width: 160px;
     
         &:active, &:focus {
@@ -48,7 +48,7 @@
     }
     
 
-    
+
     .close-modal-btn {
         margin-top: 10px;
         cursor: pointer;
