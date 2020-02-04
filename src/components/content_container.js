@@ -132,7 +132,7 @@ class Content_Container extends Component {
                                     close={this.closeModalHandler}>
                                         The ICAO airport code or 
                                         location indicator is a four-letter code designating aerodromes 
-                                        around the world. Example: Los Angeles International Airport = KLAX
+                                        around the world.<br></br> Dont Know your ICAO code? Find it <a target="_blank" href="https://www.world-airport-codes.com/">Here</a> 
                                 </Modal>
                         </div>
                         <form onSubmit={this.handleSubmit} className="submit-form-wrapper">

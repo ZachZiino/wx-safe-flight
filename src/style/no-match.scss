@@ -6,6 +6,7 @@
     padding-top: 55px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
+    color: $offwhite;
 
     .plane-img {
         width: 40%;
@@ -22,6 +23,7 @@
     }
 
     a {
+        color: $offwhite;
         text-decoration: none;
         cursor: pointer;
     }
