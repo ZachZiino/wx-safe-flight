@@ -31,8 +31,9 @@
         font-weight: 700;
         border: 1px solid transparent;
         transition: all 0.2s ease-in-out;
-        background-color: rgba(240, 243, 245, 0.8);
-        color: $blue;
+        background-color: transparent;
+        //color: $blue;
+        color: $offwhite;
         border-radius: 5px;
         height: auto;
         width: 160px;
@@ -42,7 +43,7 @@
         }
     
         &:hover {
-            background-color: $offwhite;
+            color: white;
         }
 
     }
