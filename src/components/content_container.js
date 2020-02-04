@@ -125,7 +125,7 @@ class Content_Container extends Component {
                                 
                                 : null }
 
-                                <button className="open-modal-btn" onClick={this.openModalHandler}>What is an ICAO Code?</button>
+                                <button className="open-modal-btn" onClick={this.openModalHandler}>What are ICAO Codes?</button>
 
                                 <Modal className="modal"
                                     show={this.state.isShowing}

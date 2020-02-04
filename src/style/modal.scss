@@ -48,6 +48,7 @@
     }
     
 
+    
     .close-modal-btn {
         margin-top: 10px;
         cursor: pointer;
@@ -58,6 +59,8 @@
         background-color: $green;
         color: $offwhite;
         border-radius: 5px;
+        height: auto;
+        width: 50px;
     
         &:active, &:focus {
             outline: none;
